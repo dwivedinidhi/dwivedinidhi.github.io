@@ -1,7 +1,10 @@
+/* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
+/* --- Base Styles --- */
 body { 
     font-family: 'Inter', sans-serif; 
+    line-height: 1.6;
 }
 
 .heading-font { 
@@ -12,23 +15,7 @@ body {
     background: radial-gradient(circle at top right, #1e293b, #0f172a);
 }
 
-.section-title {
-    position: relative;
-    padding-bottom: 12px;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 4px;
-    background: #3b82f6;
-    border-radius: 2px;
-}
-
-/* UI Elements */
+/* --- Navigation --- */
 .logo-box {
     width: 40px;
     height: 40px;
@@ -45,6 +32,7 @@ body {
 .nav-link {
     color: #a1a1aa;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .nav-link:hover {
@@ -58,63 +46,43 @@ body {
     border-radius: 12px;
     font-weight: 600;
     font-size: 0.875rem;
-    transition: transform 0.2s ease, background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
     background: #1d4ed8;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+/* --- Section Headers --- */
+.section-title {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: #3b82f6;
+    border-radius: 2px;
+}
+
+/* --- Hero & Profile --- */
 .profile-frame {
     width: 320px;
     height: 320px;
     border-radius: 2.5rem;
     overflow: hidden;
     border: 8px solid #18181b;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 }
 
-/* Certifications Styles */
-.cert-group {
-    background: rgba(24, 24, 27, 0.4);
-    padding: 1.5rem;
-    border-radius: 1.5rem;
-    border: 1px solid #27272a;
-}
-
-.cert-category-title {
-    font-weight: 700;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.cert-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #18181b;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid #27272a;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.cert-card span {
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-.cert-card:hover {
-    border-color: #3b82f6;
-    background: #27272a;
-    transform: translateX(5px);
-}
-
+/* --- Badge & Tag System --- */
 .social-badge {
     display: inline-flex;
     align-items: center;
@@ -122,12 +90,16 @@ body {
     padding: 0.75rem 1.5rem;
     border-radius: 1rem;
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-badge:hover {
+    transform: translateY(-3px);
 }
 
 .linkedin { background: #0077b5; color: white; }
 .github { background: #27272a; color: white; }
-.social-badge:hover { opacity: 0.9; transform: translateY(-2px); }
 
 .skill-tag {
     background: #18181b;
@@ -136,5 +108,60 @@ body {
     border-radius: 0.75rem;
     font-size: 0.875rem;
     color: #d4d4d8;
+    font-weight: 500;
+}
+
+/* --- Certifications Grid --- */
+.cert-group {
+    background: rgba(24, 24, 27, 0.6);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #27272a;
+    transition: transform 0.3s ease;
+}
+
+.cert-category-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.cert-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #09090b;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #18181b;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.cert-card span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #e4e4e7;
+}
+
+.cert-card:hover {
+    border-color: #3b82f6;
+    background: #18181b;
+    transform: translateX(4px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .section-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .profile-frame {
+        width: 260px;
+        height: 260px;
+    }
 }
 
