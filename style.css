@@ -1,10 +1,11 @@
-/* --- Google Fonts --- */
+/* --- Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
-/* --- Base Styles --- */
+/* --- Base & Reset --- */
 body { 
     font-family: 'Inter', sans-serif; 
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .heading-font { 
@@ -15,7 +16,7 @@ body {
     background: radial-gradient(circle at top right, #1e293b, #0f172a);
 }
 
-/* --- Navigation --- */
+/* --- Responsive Navbar Fixes --- */
 .logo-box {
     width: 40px;
     height: 40px;
@@ -27,12 +28,12 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .nav-link {
     color: #a1a1aa;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 .nav-link:hover {
@@ -47,6 +48,7 @@ body {
     font-weight: 600;
     font-size: 0.875rem;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .contact-btn:hover {
@@ -91,7 +93,7 @@ body {
     border-radius: 1rem;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
 .social-badge:hover {
@@ -111,13 +113,12 @@ body {
     font-weight: 500;
 }
 
-/* --- Certifications Grid --- */
+/* --- Certifications --- */
 .cert-group {
     background: rgba(24, 24, 27, 0.6);
     padding: 1.5rem;
     border-radius: 1.5rem;
     border: 1px solid #27272a;
-    transition: transform 0.3s ease;
 }
 
 .cert-category-title {
@@ -138,6 +139,7 @@ body {
     border: 1px solid #18181b;
     transition: all 0.2s ease;
     text-decoration: none;
+    margin-bottom: 0.75rem;
 }
 
 .cert-card span {
@@ -152,16 +154,60 @@ body {
     transform: translateX(4px);
 }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+/* --- MOBILE OPTIMIZATION (Fix for the Screenshot Issues) --- */
+@media (max-width: 640px) {
+    /* Navbar Scaling */
+    nav .max-w-6xl {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .logo-box {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+
+    nav span.font-semibold {
+        font-size: 1rem !important; /* Forces name to be smaller to fit line */
+    }
+
+    .contact-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+        border-radius: 8px;
+    }
+
+    /* Hero Scaling */
+    .hero-bg h1 {
+        font-size: 3.2rem !important;
+        line-height: 1;
+    }
+
+    .hero-bg p {
+        font-size: 1rem;
+    }
+
+    .social-badge {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .profile-frame {
+        width: 260px;
+        height: 260px;
+        border-width: 4px;
+    }
+
+    /* General Layout */
     .section-title:after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
-    .profile-frame {
-        width: 260px;
-        height: 260px;
+
+    .cert-group {
+        padding: 1rem;
     }
 }
 
