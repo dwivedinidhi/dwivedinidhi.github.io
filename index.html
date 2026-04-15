@@ -6,326 +6,187 @@
     <title>Nidhi Dwivedi | Computer Science Graduate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-        }
-        .section-title {
-            position: relative;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #3b82f6, #60a5fa);
-            border-radius: 9999px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-zinc-950 text-zinc-200">
 
-    <!-- Compact Navbar -->
     <nav class="fixed top-0 left-0 right-0 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 z-50">
         <div class="max-w-6xl mx-auto px-5 py-3 md:py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">ND</div>
+                <div class="logo-box">ND</div>
                 <span class="font-semibold text-xl md:text-2xl tracking-tighter heading-font">Nidhi Dwivedi</span>
             </div>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#education" class="hover:text-blue-400 transition">Education</a>
-                <a href="#coursework" class="hover:text-blue-400 transition">Coursework</a>
-                <a href="#certifications" class="hover:text-blue-400 transition">Certifications</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </div>
-            
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-2xl text-sm font-semibold transition">
-                Contact Me
-            </a>
-            
+
+            <a href="#contact" class="contact-btn">Contact Me</a>
+
             <button id="mobile-menu-btn" class="md:hidden text-2xl p-2">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        
-        <!-- Mobile Menu -->
+
         <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-4 px-5">
             <div class="flex flex-col gap-4 text-base font-medium">
-                <a href="#about" class="py-2 hover:text-blue-400">About</a>
-                <a href="#education" class="py-2 hover:text-blue-400">Education</a>
-                <a href="#coursework" class="py-2 hover:text-blue-400">Coursework</a>
-                <a href="#certifications" class="py-2 hover:text-blue-400">Certifications</a>
-                <a href="#projects" class="py-2 hover:text-blue-400">Projects</a>
-                <a href="#skills" class="py-2 hover:text-blue-400">Skills</a>
+                <a href="#about" class="py-2">About</a>
+                <a href="#education" class="py-2">Education</a>
+                <a href="#certifications" class="py-2">Certifications</a>
+                <a href="#projects" class="py-2">Projects</a>
+                <a href="#skills" class="py-2">Skills</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-bg min-h-screen flex items-center pt-16 md:pt-20">
-        <div class="max-w-6xl mx-auto px-5 md:px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+    <section class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-5 md:px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 text-center md:text-left">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight heading-font tracking-tighter">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight heading-font tracking-tighter">
                     Hi, I'm <span class="text-blue-400">Nidhi</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-zinc-400 max-w-lg mx-auto md:mx-0">
-                    Computer Science Graduate passionate about building secure and efficient digital solutions.
+                    Computer Science Graduate focused on Cloud Architecture, Networking, and Secure Software Solutions.
                 </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <a href="tel:+917806040660" class="flex items-center gap-3 bg-zinc-900 hover:bg-zinc-800 px-6 py-4 rounded-3xl border border-zinc-700 transition">
-                        <i class="fas fa-phone text-blue-400"></i>
-                        <div class="text-left">
-                            <div class="text-xs text-zinc-400">Phone</div>
-                            <div class="font-medium">+91 78060 40660</div>
-                        </div>
-                    </a>
-                    <a href="mailto:dwivedinidhi272@gmail.com" class="flex items-center gap-3 bg-zinc-900 hover:bg-zinc-800 px-6 py-4 rounded-3xl border border-zinc-700 transition">
-                        <i class="fas fa-envelope text-blue-400"></i>
-                        <div class="text-left">
-                            <div class="text-xs text-zinc-400">Email</div>
-                            <div class="font-medium">dwivedinidhi272@gmail.com</div>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="flex gap-4 justify-center md:justify-start pt-6">
-                    <a href="https://www.linkedin.com/in/nidhi-dwivedi-76307a226" target="_blank" class="bg-zinc-800 hover:bg-blue-600 px-7 py-3.5 rounded-2xl flex items-center gap-3 transition text-sm font-semibold">
+
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                    <a href="https://www.linkedin.com/in/nidhi-dwivedi-76307a226" target="_blank" class="social-badge linkedin">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
-                    <a href="https://github.com/dwivedinidhi" target="_blank" class="bg-zinc-800 hover:bg-zinc-700 px-7 py-3.5 rounded-2xl flex items-center gap-3 transition text-sm font-semibold">
+                    <a href="https://github.com/dwivedinidhi" target="_blank" class="social-badge github">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                 </div>
             </div>
-            
+
             <div class="flex justify-center md:justify-end">
-                <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-[3rem] overflow-hidden border-8 border-zinc-800 shadow-2xl">
-                    <img src="https://avatars.githubusercontent.com/u/159008845?v=4&size=64" alt="Nidhi Dwivedi" class="w-full h-full object-cover">
+                <div class="profile-frame">
+                    <img src="https://avatars.githubusercontent.com/u/159008845?v=4" alt="Nidhi Dwivedi" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-20 md:py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-8 text-center md:text-left">About Me</h2>
-            <p class="text-lg md:text-xl text-zinc-300 leading-relaxed text-center md:text-left max-w-3xl mx-auto">
-                Aspiring Computer Science professional with a strong foundation in software development, data structures, 
-                algorithms, cloud computing, and networking. Passionate about creating secure, user-friendly applications 
-                and solving real-world problems through technology.
+    <section id="about" class="py-24 bg-zinc-900/50">
+        <div class="max-w-4xl mx-auto px-5">
+            <h2 class="section-title text-4xl font-semibold heading-font mb-8">About Me</h2>
+            <p class="text-lg text-zinc-300 leading-relaxed">
+                Aspiring CS professional with a 7.88 CGPA from Gyan Ganga Institute. I specialize in building scalable environments using AWS and robust networks via Cisco technologies. I thrive at the intersection of development and system architecture.
             </p>
         </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="py-20 md:py-24">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-12 text-center md:text-left">Education</h2>
-            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 border border-zinc-800">
-                <div class="flex flex-col md:flex-row justify-between gap-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold">Bachelor of Science in Computer Science</h3>
-                        <p class="text-blue-400 mt-1 text-lg">
-                            <a href="https://ggits.org/" target="_blank" class="hover:underline">Gyan Ganga Institute of Technology and Sciences</a>
-                        </p>
-                        <p class="text-zinc-400 mt-2">Jabalpur, Madhya Pradesh</p>
-                    </div>
-                    <div class="text-center md:text-right">
-                        <span class="block text-zinc-400">August 2021 – June 2025</span>
-                        <span class="block text-emerald-400 font-medium text-lg mt-3">7.88 CGPA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Coursework -->
-    <section id="coursework" class="py-20 md:py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-12 text-center md:text-left">Relevant Coursework</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Data Structures</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Operating System</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Software Engineering</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Algorithm Analysis</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Database Management System</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Machine Learning</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Computer Architecture</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Object Oriented Programming</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Theory of Computation</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Computer Network</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Compiler Design</div>
-                <div class="bg-zinc-800/60 hover:bg-zinc-800 p-6 rounded-2xl text-center md:text-left transition">Quantitative Aptitude</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="py-20 md:py-24">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-12 text-center md:text-left">Achievements & Certifications</h2>
-            <div class="space-y-6">
-                <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 p-6 md:p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
-                        <i class="fas fa-certificate text-3xl"></i>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <p class="font-semibold text-xl">Cisco Certified Network Associate (CCNA)</p>
-                        <p class="text-zinc-400 mt-1">Cisco</p>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 p-6 md:p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
-                        <i class="fas fa-certificate text-3xl"></i>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <p class="font-semibold text-xl">AWS Cloud Foundations</p>
-                        <p class="text-zinc-400 mt-1">Amazon Web Services</p>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 p-6 md:p-8 rounded-3xl border border-zinc-800">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
-                        <i class="fas fa-certificate text-3xl"></i>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <p class="font-semibold text-xl">AWS Cloud Architecture</p>
-                        <p class="text-zinc-400 mt-1">Amazon Web Services</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20 md:py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-12 text-center md:text-left">Projects</h2>
-            <div class="text-center py-20 bg-zinc-800/30 rounded-3xl border border-dashed border-zinc-700">
-                <p class="text-zinc-400 text-xl">Projects section coming soon</p>
-                <p class="text-sm text-zinc-500 mt-3">Password Generator • Calculator App • More to be added</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Enhanced Skills Section -->
-    <section id="skills" class="py-20 md:py-24">
-        <div class="max-w-4xl mx-auto px-5 md:px-6">
-            <h2 class="section-title text-4xl md:text-5xl font-semibold heading-font mb-12 text-center md:text-left">Technical Skills</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Languages -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-                    <h3 class="font-semibold text-blue-400 mb-6 text-xl flex items-center gap-2">
-                        <i class="fas fa-code"></i> Languages
-                    </h3>
-                    <ul class="space-y-3 text-zinc-300">
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> Java</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> C++</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> Python</li>
-                    </ul>
-                </div>
+    <section id="certifications" class="py-24">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="section-title text-4xl font-semibold heading-font mb-12">Verified Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Web Technologies -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-                    <h3 class="font-semibold text-blue-400 mb-6 text-xl flex items-center gap-2">
-                        <i class="fas fa-globe"></i> Web Technologies
-                    </h3>
-                    <ul class="space-y-3 text-zinc-300">
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> HTML5</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> CSS3</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> JavaScript</li>
-                    </ul>
+                <div class="cert-group">
+                    <h3 class="cert-category-title text-blue-400"><i class="fas fa-network-wired mr-2"></i>Networking</h3>
+                    <div class="space-y-3">
+                        <a href="certs/CCNAITNUpdated20260415-31-hbcha2.pdf" target="_blank" class="cert-card">
+                            <span>CCNA: Introduction to Networks</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                        <a href="certs/CCNASRWEUpdate20260415-32-60c900.pdf" target="_blank" class="cert-card">
+                            <span>CCNA: Switching & Routing</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                        <a href="certs/CCNAENSAUpdate20260415-32-j35zw1.pdf" target="_blank" class="cert-card">
+                            <span>CCNA: Enterprise Security</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
                 </div>
-                
-                <!-- Tools & Technologies -->
-                <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
-                    <h3 class="font-semibold text-blue-400 mb-6 text-xl flex items-center gap-2">
-                        <i class="fas fa-tools"></i> Tools & Technologies
-                    </h3>
-                    <ul class="space-y-3 text-zinc-300">
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> Visual Studio</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> AWS (Cloud Foundations & Architecture)</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> Linux</li>
-                        <li class="flex items-center gap-2"><span class="text-emerald-400">→</span> Git & GitHub</li>
-                    </ul>
+
+                <div class="cert-group">
+                    <h3 class="cert-category-title text-orange-400"><i class="fab fa-aws mr-2"></i>Cloud Computing</h3>
+                    <div class="space-y-3">
+                        <a href="certs/AWS_Academy_Graduate___Cloud_Foundations___Training_Badge_Badge20260415-32-xta0qp.pdf" target="_blank" class="cert-card">
+                            <span>AWS Cloud Foundations</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                        <a href="certs/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260415-32-jq3y6z.pdf" target="_blank" class="cert-card">
+                            <span>AWS Cloud Architecting</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                        <a href="certs/AWS_Academy_Graduate___Machine_Learning_Foundations___Training_Badge_Badge20260415-32-dy55fe.pdf" target="_blank" class="cert-card">
+                            <span>AWS Machine Learning</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <div class="cert-group">
+                    <h3 class="cert-category-title text-emerald-400"><i class="fas fa-user-shield mr-2"></i>Cybersecurity</h3>
+                    <div class="space-y-3">
+                        <a href="certs/nidhidwivedi-Aicte_Cisco_Virt-cybersecurity%20essentialscertificate%20(1).pdf" target="_blank" class="cert-card">
+                            <span>Cybersecurity Essentials</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                        <a href="certs/nidhidwivedi-Aicte_Cisco_Virt-introduction%20to%20packet%20tracer%20certificate.pdf" target="_blank" class="cert-card">
+                            <span>Cisco Packet Tracer</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 md:py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-5 md:px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-semibold heading-font mb-6">Let's Connect</h2>
-            <p class="text-zinc-400 text-lg max-w-md mx-auto">
-                Open to new opportunities, collaborations, or conversations about technology.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 mt-12">
-                <a href="mailto:dwivedinidhi272@gmail.com" class="flex-1 max-w-xs bg-zinc-800 hover:bg-zinc-700 px-8 py-5 rounded-3xl transition flex items-center justify-center gap-3 text-lg">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/nidhi-dwivedi-76307a226" target="_blank" class="flex-1 max-w-xs bg-zinc-800 hover:bg-blue-600 px-8 py-5 rounded-3xl transition flex items-center justify-center gap-3 text-lg">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/dwivedinidhi" target="_blank" class="flex-1 max-w-xs bg-zinc-800 hover:bg-zinc-700 px-8 py-5 rounded-3xl transition flex items-center justify-center gap-3 text-lg">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+    <section id="skills" class="py-24 bg-zinc-900/50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="section-title text-4xl font-semibold heading-font mb-12">Technical Toolkit</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">AWS Architecture</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Git/GitHub</span>
+                <span class="skill-tag">Data Structures</span>
+                <span class="skill-tag">Network Security</span>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-10 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-500 text-sm">
-            © 2026 Nidhi Dwivedi • Built with passion for technology
+    <footer class="bg-black py-12 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-zinc-500 text-sm">© 2026 Nidhi Dwivedi • Computer Science Portfolio</p>
+            <div class="mt-4 flex justify-center gap-6 text-zinc-400">
+                <a href="mailto:dwivedinidhi272@gmail.com" class="hover:text-blue-400 transition"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+917806040660" class="hover:text-blue-400 transition"><i class="fas fa-phone"></i></a>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            menuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
-                ? '<i class="fas fa-bars"></i>' 
-                : '<i class="fas fa-times"></i>';
         });
-        
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Smooth scroll
+
+        // Smooth scroll adjustment for fixed header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const offset = 80;
-                        const elementPosition = target.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.scrollY - offset;
-                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    }
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
     </script>
 </body>
-  </html>
+</html>
+
